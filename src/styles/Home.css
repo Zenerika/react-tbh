@@ -1,0 +1,14 @@
+.tbh-row {
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    text-align: center;
+    width: 90%;
+    margin: 100px 0;
+    padding: 40px;
+  }
+  
+  .tbh-card-item {
+    flex-grow: 1;
+    font-size: 6mm;
+  }
