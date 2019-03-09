@@ -5,7 +5,6 @@ const Tab = ({isActive, handleClick, label}) => {
     <div>
       <li className={isActive ? "is-active" : ""}
           onClick={() => handleClick()}>
-          <a>{label}</a>
       </li>
     </div>
   )
