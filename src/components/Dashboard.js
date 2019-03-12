@@ -5,6 +5,7 @@ import Groceries from "../styles/img/groceries-wh.png"
 import Medical from "../styles/img/medical-wh.png"
 import Calendar from "../styles/img/calendar-wh.png"
 import Fitness from "../styles/img/fitness-wh.png"
+import { Link, NavLink } from 'react-router-dom'
 
 class Dashboard extends Component {
   
@@ -16,8 +17,8 @@ class Dashboard extends Component {
 
           <div className="tbh-row">
 
-            <div className="tbh-card-item" onClick={() => changeTab(1)}><h1>Chores</h1>
-              <a><img src={Chores} width="80px" alt="chores"/></a>
+            <div className="tbh-card-item"><h1>Chores</h1>
+              <Link to="/chores"><img src={Chores} width="80px" alt="chores"/></Link>
             </div>
 
             <div className="tbh-card-item" onClick={() => changeTab(2)}><h1>Bills</h1>

@@ -1,16 +1,37 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Quote from './Quote'
+import axios from 'axios'
 
 class Chores extends Component {
   constructor(props) {
     super(props)
   
     this.state = {
-       todoItem: '',
-       done: false
+      who: '', 
+      todoItem: '',
+      when: '',
+      done: false,
+      quote: '\"To thy own self be true.\"'
     }
+    this.changeQuote = this.changeQuote.bind(this)
   }
   
+  changeQuote(newQuote) {
+    this.setState({quote: newQuote})
+  }
+
+  componentDidMount() {
+    axios.get('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&callback=')
+    .then((response) => {
+      console.log('response: ', response);
+      this.changeQuote(response.data[0].content)
+    })
+    .catch(function (error) {
+      console.log('error: ', error);
+    });
+  }
+
   handleChangeTodoItem(e) {
     e.preventDefault()
     this.setState({todoItem: e.target.value})
@@ -23,6 +44,8 @@ class Chores extends Component {
   
   render() {
     return (
+    <div>
+    <Quote quote={this.state.quote}/> 
       <div className="columns is-centered">
         <div className="column is-half">
 
@@ -54,6 +77,7 @@ class Chores extends Component {
           </div>
         </div>
       </div>
+    </div>
     )
   }
 }
