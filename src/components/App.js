@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom'
+
+// css
 import '../styles/App.css';
 import 'bulma'
 import '../styles/custom.sass'
-import { BrowserRouter, Route } from 'react-router-dom'
 
 // Components
 import Home from './Home.js'
@@ -12,6 +14,7 @@ import Groceries from './Groceries.js'
 import Medical from './Medical.js'
 import Calendar from './Calendar.js'
 import Fitness from './Fitness.js'
+import Navbar from './Navbar.js'
 
 class App extends Component {
 
@@ -19,7 +22,7 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Home />
+          <Navbar/>
           <Route exact path='/' component={Home} />
           <Route path='/chores' component={Chores} />
           <Route path='/bills' component={Bills} />

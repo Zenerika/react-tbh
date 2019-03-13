@@ -14,11 +14,9 @@ const quoteStyle = {
 }
 
 const Quote = ({quote}) => { 
-    console.log('quote', {quote})
-
     return (
     <div style={quoteStyle}>
-        <p className="quote" dangerouslySetInnerHTML={{__html: quote}}> --</p>
+        <span className="quote">"{quote}"</span>
     </div>
   )
 }
