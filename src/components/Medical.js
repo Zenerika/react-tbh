@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import UnderConstruction from './UnderConstruction'
 
 class Medical extends Component {
   render() {
     return (
       <div>
-        <h1>Medical</h1>
+        <UnderConstruction />
       </div>
     )
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import UnderConstruction from './UnderConstruction'
 
-class Calendar extends Component {
+class Auto extends Component {
   render() {
     return (
       <div>
@@ -11,4 +11,5 @@ class Calendar extends Component {
   }
 }
 
-export default Calendar
+export default Auto
+

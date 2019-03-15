@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.css';
 import App from './components/App';
-import choresReducer from './reducers/choresReducer';
+import rootReducer from './reducers/index'
 import { createStore } from 'redux';
 import {Provider} from 'react-redux';
 
-const store = createStore(choresReducer);
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
     <Provider store={store}>

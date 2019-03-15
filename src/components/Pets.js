@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import UnderConstruction from './UnderConstruction'
 
-class Calendar extends Component {
+class Pets extends Component {
   render() {
     return (
       <div>
-        <UnderConstruction />
+          <UnderConstruction />
       </div>
     )
   }
 }
 
-export default Calendar
+export default Pets

@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import UnderConstruction from './UnderConstruction'
 
 class Fitness extends Component {
   render() {
     return (
       <div>
-        <h1>Fitness</h1>
+        <UnderConstruction />
       </div>
     )
   }

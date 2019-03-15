@@ -9,10 +9,10 @@ class Chores extends Component {
   
     this.state = {
       who: '', 
-      todoItem: '',
+      chore: '',
       when: '',
       done: false,
-      quote: '\"To thy own self be true.\"'
+      quote: '"To thy own self be true."'
     }
     this.changeQuote = this.changeQuote.bind(this)
   }
@@ -32,14 +32,15 @@ class Chores extends Component {
     });
   }
 
-  handleChangeTodoItem(e) {
+  handleChangeChore(e) {
     e.preventDefault()
-    this.setState({todoItem: e.target.value})
+    this.setState({chore: e.target.value})
   }
 
-  handleSubmitNewTodo(e) {
+  handleSubmitNewChore(e) {
     e.preventDefault()
-    this.props.addTodo(this.state.todoItem)
+    this.props.addChore(this.state.chore)
+    this.setState({chore: ''})
   }
   
   render() {
@@ -53,14 +54,14 @@ class Chores extends Component {
 
             <h4 className="title is-4">Chores</h4>
 
-            <form onSubmit={(e) => this.handleSubmitNewTodo(e)}>
+            <form onSubmit={(e) => this.handleSubmitNewChore(e)}>
               <div className="field has-addons">
                 <div className="control">
                   <input className="input" 
                          type="text" 
                          placeholder="Add a chore..." 
-                         onChange={(e) => this.handleChangeTodoItem(e)}
-                         value={this.props.todos.task} />
+                         onChange={(e) => this.handleChangeChore(e)}
+                         value={this.state.chore} />
                 </div>
                 <div className="control">
                   <button className="button is-primary" 
@@ -71,7 +72,11 @@ class Chores extends Component {
 
             <div className="content">
               <ul>
-                {this.props.todos.map((item, index) => <li onClick={() => this.props.toggleTodo(index)} style={{textDecoration: item.done ? 'line-through': null}}>{item.task}</li>)}
+                {this.props.chores.map((item, index) => 
+                <li key={index} onClick={() => 
+                this.props.toggleChore(index)} 
+                style={{textDecoration: item.done ? 'line-through': null}}>
+                {item.chore}</li>)}
               </ul>
             </div>
           </div>
@@ -83,12 +88,12 @@ class Chores extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  todos: state.todos
+  chores: state.choresReducer.chores
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  addTodo: (todoText) => dispatch({type: 'ADD_TODO', text: todoText}),
-  toggleTodo: (index) => dispatch({type: 'TOGGLE_TODO', index: index }) 
+  addChore: (choreText) => dispatch({type: 'ADD_CHORE', text: choreText}),
+  toggleChore: (index) => dispatch({type: 'TOGGLE_CHORE', index: index }) 
 })
 
 

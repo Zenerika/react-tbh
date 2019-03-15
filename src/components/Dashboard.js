@@ -8,6 +8,9 @@ import Groceries from "../styles/img/groceries-wh.png"
 import Medical from "../styles/img/medical-wh.png"
 import Calendar from "../styles/img/calendar-wh.png"
 import Fitness from "../styles/img/fitness-wh.png"
+import Todo from '../styles/img/todo-wh.png'
+import Auto from '../styles/img/auto-wh.png'
+import Pets from '../styles/img/dog-wh.png'
 
 class Dashboard extends Component {
   
@@ -16,14 +19,25 @@ class Dashboard extends Component {
       <div>
         <div className="tbh-cards">
           <div className="tbh-row">
+            <div className="tbh-card-item"><h1>To-Do List</h1>
+              <Link to="/todo"><img src={Todo} width="80px" alt="chores"/></Link>
+            </div>
             <div className="tbh-card-item"><h1>Chores</h1>
-              <Link to="/chores"><img src={Chores} width="80px" alt="chores"/></Link>
+              <Link to="/chores"><img src={Chores} width="80px" alt="bills"/></Link>
+            </div>
+            <div className="tbh-card-item"><h1>Groceries</h1>
+              <Link to="/groceries"><img src={Groceries} width="80px" alt="groceries"/></Link>
+            </div>
+          </div>
+          <div className="tbh-row">
+            <div className="tbh-card-item"><h1>Auto</h1>
+              <Link to="/auto"><img src={Auto} width="80px" alt="chores"/></Link>
             </div>
             <div className="tbh-card-item"><h1>Bills</h1>
               <Link to="/bills"><img src={Bills} width="80px" alt="bills"/></Link>
             </div>
-            <div className="tbh-card-item"><h1>Groceries</h1>
-              <Link to="/groceries"><img src={Groceries} width="80px" alt="groceries"/></Link>
+            <div className="tbh-card-item"><h1>Pets</h1>
+              <Link to="/pets"><img src={Pets} width="80px" alt="bills"/></Link>
             </div>
           </div>
           <div className="tbh-row">

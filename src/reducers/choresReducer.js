@@ -1,7 +1,7 @@
 const initialState = {
-    todos: [
+    chores: [
         {
-            task: 'Let\'s do this',
+            chore: 'Let\'s do this',
             done: false
         }
     ]
@@ -10,18 +10,18 @@ const initialState = {
 const choresReducer = (state = initialState, action) => {
     
     switch (action.type) {
-        case 'ADD_TODO':
-            const newTodos = state.todos.slice()
-            newTodos.push({task: action.text, done: false})
+        case 'ADD_CHORE':
+            const newChores = state.chores.slice()
+            newChores.push({chore: action.text, done: false})
             return {
-                todos: newTodos
+                chores: newChores
             }
 
-        case 'TOGGLE_TODO':
-            const doneTodos = state.todos.slice()
-            doneTodos[action.index].done = !doneTodos[action.index].done
+        case 'TOGGLE_CHORE':
+            const doneChores = state.chores.slice()
+            doneChores[action.index].done = !doneChores[action.index].done
             return {
-                todos: doneTodos
+                chores: doneChores
             }
 
         default: 

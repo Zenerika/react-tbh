@@ -1,0 +1,30 @@
+#box {
+    background-color: rgba(32,32,32,0.5);
+    border-radius: 5px;
+    color: white;
+    display: block;
+    padding: 1.25rem;
+    height: 100vh
+  }
+
+  #title {
+    color: white;
+  }
+
+  #controlBox {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #eyeIcon {
+    height: 20px;
+    align-self: center;
+    margin-left: 15px;
+  }
+
+  #coin {
+    height: 20px;
+    align-self: flex-end;
+    margin-left: 10px;
+  }
+

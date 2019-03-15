@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
     
     <div className="navbar-brand">
-      <Link to="/home" className="navbar-item">
+      <Link to="/" className="navbar-item">
         <img src={Logo} alt="Logo"/>
       </Link>
 
@@ -21,9 +21,9 @@ const Navbar = () => {
     <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons" id="btnLogout">
-          <a className="button is-primary">
+          <Link to="/logout" className="button is-primary">
             Log Out
-          </a>
+          </Link>
         </div>
       </div>
     </div>
