@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import '../styles/Chores.css'
+// import DatePicker from "react-datepicker";
+ 
+import "react-datepicker/dist/react-datepicker.css";
 
 class Chores extends Component {
   constructor(props) {
@@ -32,12 +35,17 @@ class Chores extends Component {
   handleChangeWhen(e) {
     e.preventDefault()
     this.setState({when: e.target.value})
-    // this.setState({who: ''})
+    // this.setState({when: ''})
   }
 
   handleSubmitNewChore(e) {
     e.preventDefault()
-    this.props.addChore(this.state.chore)
+    // this.props.addWho(this.state.who)
+    this.props.addChore(this.state.chore, this.state.who, this.state.when)
+    // this.props.addWhen(this.state.when)
+    console.log('who: ', this.state.who)
+    console.log('chore: ', this.state.chore)
+    console.log('when: ', this.state.when)
   }
   
   render() {
@@ -81,6 +89,10 @@ class Chores extends Component {
                       <i className="fas fa-clock"></i>
                     </span>
                   </div>
+                  {/* <DatePicker className="datePicker"
+                    selected={this.state.when}
+                    onChange={this.handleChange}
+                  /> */}
                   <div className="control">
                     <button className="button is-primary is-fullwidth"
                             type="submit">Submit</button>
@@ -89,8 +101,9 @@ class Chores extends Component {
             </form>
 
             <div className="content">
-            <h5 className="title is-5" id="title">Chores</h5>
-              <ul>
+            <h5 className="title is-5" id="subtitle">Chores</h5>
+            <h6 className="title is-6" id="subtitle">Zoe</h6>
+              <ul id="chores">
                 {this.props.chores.map((item, index) => 
                 <li key={index} onClick={() => 
                 this.props.toggleChore(index)} 
@@ -111,9 +124,14 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  addChore: (choreText) => dispatch({type: 'ADD_CHORE', text: choreText}),
+  // addWho: (whoText) => dispatch({type: 'ADD_WHO', text: whoText}),
+  addChore: (choreText, whoText, whenText) => dispatch({type: 'ADD_CHORE', text: choreText, text1: whoText, text2: whenText}),
+  // addWhen: (whenText) => dispatch({type: 'ADD_WHEN', text: whenText}),
   toggleChore: (index) => dispatch({type: 'TOGGLE_CHORE', index: index }) 
 })
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(Chores)
+
+// https://reactdatepicker.com/#example-37
+// https://www.npmjs.com/package/react-datepicker

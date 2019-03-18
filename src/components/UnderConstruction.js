@@ -15,7 +15,7 @@ class UnderConstruction extends Component {
     return (
         <div className="pardon">
             <div id="pardon-items">
-                <img src={Cone} alt="cone" width="200px" />
+                {/* <img src={Cone} alt="cone" width="200px" /> */}
                 <h1 style={pardonStyle}>Please pardon our dust... we will have this ready soon!</h1><p></p>
             </div>
       </div>

@@ -19,6 +19,7 @@ class Groceries extends Component {
   handleSubmitNewGrocery(e) {
     e.preventDefault()
     this.props.addGrocery(this.state.groceryItem)
+    this.setState({groceryItem: ''})
   }
   
   render() {

@@ -11,6 +11,12 @@
     color: white;
   }
 
+  #subtitle {
+    color: white;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+
   #controlBox {
     display: flex;
     flex-direction: row;
@@ -21,10 +27,33 @@
   }
 
   #status {
-    margin-right: 5px;
+    margin-right: 10px;
+    /* due: */
+    /* color: hsl(217, 71%, 53%); */
+    /* urgent: */
+    /* color: hsl(48, 100%, 67%); */
+    /* past due: */
+    /* color: hsl(348, 100%, 61%); */
+    /* done: */
+    color: hsl(0, 0%, 98%);
   }
 
-  ul {
+  #chores {
     list-style-type: none;
+    /* padding: 5px; */
+    /* margin-left: 5px; */
+  }
+
+  #datePicker {
+    width: 400px;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    font: 400 11px system-ui;
+
   }
 
