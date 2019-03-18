@@ -40,12 +40,9 @@ class Chores extends Component {
 
   handleSubmitNewChore(e) {
     e.preventDefault()
-    // this.props.addWho(this.state.who)
-    this.props.addChore(this.state.chore, this.state.who, this.state.when)
-    // this.props.addWhen(this.state.when)
-    console.log('who: ', this.state.who)
-    console.log('chore: ', this.state.chore)
-    console.log('when: ', this.state.when)
+    this.props.addWho(this.state.who)
+    this.props.addChore(this.state.chore)
+    this.props.addWhen(this.state.when)
   }
   
   render() {
@@ -124,9 +121,9 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  // addWho: (whoText) => dispatch({type: 'ADD_WHO', text: whoText}),
-  addChore: (choreText, whoText, whenText) => dispatch({type: 'ADD_CHORE', text: choreText, text1: whoText, text2: whenText}),
-  // addWhen: (whenText) => dispatch({type: 'ADD_WHEN', text: whenText}),
+  addWho: (whoText) => dispatch({type: 'ADD_WHO', text: whoText}),
+  addChore: (choreText) => dispatch({type: 'ADD_CHORE', text: choreText}),
+  addWhen: (whenText) => dispatch({type: 'ADD_WHEN', text: whenText}),
   toggleChore: (index) => dispatch({type: 'TOGGLE_CHORE', index: index }) 
 })
 
