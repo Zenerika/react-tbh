@@ -1,13 +1,13 @@
+function deepCopy(x) {
+    return JSON.parse(JSON.stringify(x));
+  }
+
 const initialState = {
     chores: [
         {
             who: '', 
             chore: 'Let\'s do this',
-            when: '',
-            due: true,
-            urgent: false,
-            pastdue: false,
-            done: false
+            priority: ''
         }
     ]
 }
@@ -15,26 +15,12 @@ const initialState = {
 const choresReducer = (state = initialState, action) => {
     
     switch (action.type) {
-        case 'ADD_WHO':
-            const newWho = state.chores.slice()
-            newWho.push({who: action.text, done: false})
-            return {
-                who: newWho
-            }
-        
         case 'ADD_CHORE':
-            const newChores = state.chores.slice()
-            newChores.push({chore: action.text, done: false})
-            return {
-                chores: newChores
-            }
-        
-        case 'ADD_WHEN':
-            const newWhen = state.chores.slice()
-            newWhen.push({when: action.text, done: false})
-            return {
-                when: newWhen
-            }
+            const newChore = deepCopy(state)
+            newChore.chores.push({who: action.who, 
+                                chore: action.chore, 
+                                priority: action.priority})
+            return newChore
 
         case 'TOGGLE_CHORE':
             const doneChores = state.chores.slice()
@@ -49,3 +35,21 @@ const choresReducer = (state = initialState, action) => {
 }
 
 export default choresReducer;
+
+
+
+
+
+        // case 'ADD_CHORE':
+        //     const newChores = state.chores.slice()
+        //     newChores.push({chore: action.text, done: false})
+        //     return {
+        //         chores: newChores
+        //     }
+        
+        // case 'ADD_WHEN':
+        //     const newWhen = state.chores.slice()
+        //     newWhen.push({when: action.text, done: false})
+        //     return {
+        //         when: newWhen
+        //     }
