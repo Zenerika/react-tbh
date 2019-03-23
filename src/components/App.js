@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 
 // css
-import '../styles/App.css';
-import 'bulma'
 import '../styles/custom.sass'
+import 'bulma'
 
 // Components
 import Home from './Home.js'
 import Todo from './Todo.js'
-import Chores from './Chores.js'
+// import Chores from './Chores.js'
+import Chores from './ChoresRefactored'
 import Groceries from './Groceries.js'
 import Auto from './Auto.js'
 import Bills from './Bills.js'
