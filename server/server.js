@@ -22,19 +22,16 @@ connection.once('open', function() {
     console.log("MongoDB database connection established");
 })
 
-// todoRoutes.route('/').get(function(req, res) {
-//     Todo.find(function(err, todos) {
-//         if (err) {
-//             console.log(err);
-//         } else {
-//             res.json(todos);
-//         }
-//     });
-// });
+todoRoutes.route('/').get(function(req, res) {
+    Todo.find(function(err, todos) {
+        if (err) {
+            console.log(err);
+        } else {
+            res.json(todos);
+        }
+    });
+});
 
-app.use('*', (req, res)=> {
-    res.sendFile(path.join(__dirname, '..', 'build', 'index.html'))
-})
 
 todoRoutes.route('/:id').get(function(req, res) {
     let id = req.params.id;
@@ -78,6 +75,10 @@ todoRoutes.route('/update/:id').post(function(req, res) {
 
 app.use('/todos', todoRoutes);
 
+
+app.use('/', (req, res)=> {
+    res.sendFile(path.join(__dirname, '..', 'build', 'index.html'))
+})
 
 app.listen(PORT, function() {
     console.log('Server is running on port: ' + PORT);
