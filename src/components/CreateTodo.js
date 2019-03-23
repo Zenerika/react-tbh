@@ -52,7 +52,7 @@ import axios from 'axios';
             todo_completed: this.state.todo_completed
         }
 
-        axios.post('http://localhost:4000/todos/add', newTodo)
+        axios.post('/todos/add', newTodo)
              .then(res => console.log(res.data));
         this.setState({
             todo_description: '',
@@ -63,7 +63,7 @@ import axios from 'axios';
     }
 
     componentDidUpdate() {
-        axios.get('http://localhost:4000/todos/')
+        axios.get('/todos')
              .catch(function(error) {
             console.log(error);
         }) 
