@@ -4,9 +4,14 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
     "bulma": "0.6.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.19",
     "node-sass": "^4.11.0",
+    "path": "^0.12.7",
     "react": "^16.8.3",
     "react-datepicker": "^2.2.0",
     "react-dom": "^16.8.3",
@@ -16,7 +21,8 @@
     "redux": "^4.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server/server.js",
+    "start-dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
