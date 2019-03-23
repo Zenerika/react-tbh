@@ -12,7 +12,7 @@ let Todo = require('./todo.model')
 app.use(cors());
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, 'build')))
+app.use(express.static(path.join(__dirname, '..', 'build')))
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
 // mongoose.connect(process.env.MONGODB_URI);
@@ -33,7 +33,7 @@ connection.once('open', function() {
 // });
 
 app.use('*', (req, res)=> {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+    res.sendFile(path.join(__dirname, '..', 'build', 'index.html'))
 })
 
 todoRoutes.route('/:id').get(function(req, res) {
