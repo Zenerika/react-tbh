@@ -12,6 +12,8 @@ let Todo = require('./todo.model')
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use(express.static(path.join(__dirname, 'build')))
+
 mongoose.connect('mongodb://127.0.0.1:27017/todos', { useNewUrlParser: true })
 // mongoose.connect(process.env.MONGODB_URI);
 const connection = mongoose.connection;
@@ -20,15 +22,19 @@ connection.once('open', function() {
     console.log("MongoDB database connection established");
 })
 
-todoRoutes.route('/').get(function(req, res) {
-    Todo.find(function(err, todos) {
-        if (err) {
-            console.log(err);
-        } else {
-            res.json(todos);
-        }
-    });
-});
+// todoRoutes.route('/').get(function(req, res) {
+//     Todo.find(function(err, todos) {
+//         if (err) {
+//             console.log(err);
+//         } else {
+//             res.json(todos);
+//         }
+//     });
+// });
+
+app.use('*', (req, res)=> {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
 
 todoRoutes.route('/:id').get(function(req, res) {
     let id = req.params.id;
@@ -67,14 +73,11 @@ todoRoutes.route('/update/:id').post(function(req, res) {
     });
 });
 
-app.use(express.static(path.join(__dirname, 'build')))
+
 
 
 app.use('/todos', todoRoutes);
 
-app.use('*', (req, res)=> {
-    return res.sendFile(path.join(__dirname, 'build', 'index.html'))
-})
 
 app.listen(PORT, function() {
     console.log('Server is running on port: ' + PORT);
