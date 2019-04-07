@@ -23,32 +23,32 @@ class Dashboard extends Component {
             <Link to="/todo"><img src={Todo} width="80px" id="icon" alt="to-do list"/></Link>
           </div>
           <div className="tbh-card-item">Chores<br></br>
-            <Link to="/chores"><img src={Chores} width="80px" alt="chores"/></Link>
+            <Link to="/chores"><img src={Chores} width="80px" id="icon" alt="chores"/></Link>
           </div>
           <div className="tbh-card-item">Groceries<br></br>
-            <Link to="/groceries"><img src={Groceries} width="80px" alt="groceries"/></Link>
+            <Link to="/groceries"><img src={Groceries} width="80px" id="icon" alt="groceries"/></Link>
           </div>
         </div>
         <div className="tbh-row">
           <div className="tbh-card-item">Auto<br></br>
-            <Link to="/auto"><img src={Auto} width="80px" alt="auto"/></Link>
+            <Link to="/auto"><img src={Auto} width="80px" id="icon" alt="auto"/></Link>
           </div>
           <div className="tbh-card-item">Bills<br></br>
-            <Link to="/bills"><img src={Bills} width="80px" alt="bills"/></Link>
+            <Link to="/bills"><img src={Bills} width="80px" id="icon" alt="bills"/></Link>
           </div>
           <div className="tbh-card-item">Pets<br></br>
-            <Link to="/pets"><img src={Pets} width="80px" alt="pets"/></Link>
+            <Link to="/pets"><img src={Pets} width="80px" id="icon" alt="pets"/></Link>
           </div>
         </div>
         <div className="tbh-row">
           <div className="tbh-card-item">Medical<br></br>
-            <Link to="/medical"><img src={Medical} width="80px" alt="medical"/></Link>
+            <Link to="/medical"><img src={Medical} width="80px" id="icon" alt="medical"/></Link>
           </div>
           <div className="tbh-card-item">Calendar<br></br>
-            <Link to="/calendar"><img src={Calendar} width="80px" alt="calendar"/></Link>
+            <Link to="/calendar"><img src={Calendar} width="80px" id="icon" alt="calendar"/></Link>
           </div>
           <div className="tbh-card-item">Fitness<br></br>
-            <Link to="/fitness"><img src={Fitness} width="80px" alt="fitness"/></Link>
+            <Link to="/fitness"><img src={Fitness} width="80px" id="icon" alt="fitness"/></Link>
           </div>
         </div>
         </div>
