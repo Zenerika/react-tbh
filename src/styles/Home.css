@@ -13,11 +13,11 @@
     font-size: 6mm;
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 450px) {
     .tbh-row {
       display: flex;
       flex-direction: row;
-      color: red;
+      color: white;
       text-align: center;
       width: 90%;
       margin: 50px 0;
@@ -26,6 +26,10 @@
     
     .tbh-card-item {
       flex-grow: 1;
-      font-size: 3mm;
+      font-size: 2em;
+    }
+    
+    img.tbh-card-item {
+      width: 40px;
     }
   }
