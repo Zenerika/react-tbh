@@ -20,13 +20,13 @@ class Dashboard extends Component {
       <div className="tbh-cards">
         <div className="tbh-row">
           <div className="tbh-card-item">To-Do List
-            <Link to="/todo"><img src={Todo} alt="chores"/></Link>
+            <Link to="/todo"><img src={Todo} width="80px" alt="chores"/></Link>
           </div>
           <div className="tbh-card-item">Chores
-            <Link to="/chores"><img src={Chores} alt="bills"/></Link>
+            <Link to="/chores"><img src={Chores} width="80px" alt="bills"/></Link>
           </div>
           <div className="tbh-card-item">Groceries
-            <Link to="/groceries"><img src={Groceries} alt="groceries"/></Link>
+            <Link to="/groceries"><img src={Groceries} width="80px" alt="groceries"/></Link>
           </div>
         </div>
         <div className="tbh-row">
