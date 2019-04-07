@@ -19,7 +19,7 @@ class Dashboard extends Component {
       <div>
       <div className="tbh-cards">
         <div className="tbh-row">
-          <div className="tbh-card-item">To-Do List<br></br>
+          <div className="tbh-card-item">To-Do's<br></br>
             <Link to="/todo"><img src={Todo} width="80px" alt="to-do list"/></Link>
           </div>
           <div className="tbh-card-item">Chores<br></br>
