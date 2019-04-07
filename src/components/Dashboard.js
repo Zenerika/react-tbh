@@ -18,7 +18,7 @@ class Dashboard extends Component {
     return (
       <div>
         <div className="columns">
-          <div className="column">
+          <div className="column is-half">
             <div className="tbh-card-item"><h1>To-Do List</h1>
               <Link to="/todo"><img src={Todo} width="80px" alt="chores"/></Link>
             </div>
@@ -35,7 +35,7 @@ class Dashboard extends Component {
               <Link to="/fitness"><img src={Fitness} width="80px" alt="fitness"/></Link>
             </div>
           </div>
-          <div className="column">
+          <div className="column is-half">
             <div className="tbh-card-item"><h1>Chores</h1>
               <Link to="/chores"><img src={Chores} width="80px" alt="chores"/></Link>
             </div>
