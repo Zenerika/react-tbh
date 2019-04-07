@@ -24,11 +24,15 @@ This app used the following technologies:
 ## Project Management
 I created a flowchart to understand the project scope and then I continued creating updated to-do lists while prioritizing my //todos. 
 
-![alt text](https://github.com/Zenerika/react-tbh/blob/master/TBH_Flowchart/TBH_FlowChart_v1_1.png)
-![alt text](https://github.com/Zenerika/react-tbh/blob/master/TBH_Flowchart/TBH_FlowChart_v1_2.png)
-![alt text](https://github.com/Zenerika/react-tbh/blob/master/TBH_Flowchart/TBH_FlowChart_v1_3.png)
-![alt text](https://github.com/Zenerika/react-tbh/blob/master/TBH_Flowchart/TBH_FlowChart_v1_4.png)
-
+___
+![TBH Flowchart](https://github.com/Zenerika/react-tbh/blob/master/TBH_Flowchart/TBH_FlowChart_v1_1.png)
+___
+![To-Do Flowchart](https://github.com/Zenerika/react-tbh/blob/master/TBH_Flowchart/TBH_FlowChart_v1_2.png)
+___
+![Grocery List Flowchart](https://github.com/Zenerika/react-tbh/blob/master/TBH_Flowchart/TBH_FlowChart_v1_3.png)
+___
+![Bills Flowchart](https://github.com/Zenerika/react-tbh/blob/master/TBH_Flowchart/TBH_FlowChart_v1_4.png)
+___
 
 
 
