@@ -23,7 +23,7 @@
   .tbh-row {
     display: flex;
     flex-direction: row;
-    font-size: 2em;
+    font-size: 1.5rem;
     color: red;
     text-align: center;
     width: 90%;
