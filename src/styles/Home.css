@@ -1,3 +1,4 @@
+@media only screen and (min-width: 451px) {
 .tbh-row {
     display: flex;
     flex-direction: row;
@@ -16,24 +17,25 @@
   img.tbh-card-item {
     width: 80px;
   }
+}
 
-  @media only screen and (max-width: 450px) {
-    .tbh-row {
-      display: flex;
-      flex-direction: row;
-      color: red;
-      text-align: center;
-      width: 90%;
-      margin: 50px 0;
-      padding: 20px;
-    }
-    
-    .tbh-card-item {
-      flex-grow: 1;
-      font-size: 2em;
-    }
-    
-    img.tbh-card-item {
-      width: 40px;
-    }
+@media only screen and (max-width: 450px) {
+  .tbh-row {
+    display: flex;
+    flex-direction: row;
+    color: red;
+    text-align: center;
+    width: 90%;
+    margin: 50px 0;
+    padding: 20px;
   }
+  
+  .tbh-card-item {
+    flex-grow: 1;
+    font-size: 2em;
+  }
+  
+  img.tbh-card-item {
+    width: 40px;
+  }
+}
