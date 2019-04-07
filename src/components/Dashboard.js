@@ -48,7 +48,7 @@ class Dashboard extends Component {
             <div className="tbh-card-item"><h1>Calendar</h1>
               <Link to="/calendar"><img src={Calendar} width="80px" alt="calendar"/></Link>
             </div>
-            <div className="tbh-card-item"><h1>Chat</h1>
+            <div className="tbh-card-item"><h1>Chatbot</h1>
               <Link to="/chat"><img src={Todo} width="80px" alt="chat"/></Link>
             </div>
           </div>
