@@ -15,6 +15,10 @@
   img.tbh-card-item {
     width: 80px;
   }
+
+  #icon {
+    width: 80px;
+  }
 }
 
 @media only screen and (max-width: 450px) {
@@ -24,13 +28,16 @@
     text-align: center;
     margin: 50px 0;
     padding: 20px;
-    width: 90%;
+    width: 95%;
   }
   
   .tbh-card-item {
     flex-grow: 1;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin: 0px 15px;
   }
-
+  
+  #icon {
+    width: 60px;
+  }
 }
