@@ -1,12 +1,9 @@
 @media only screen and (min-width: 451px) {
 .tbh-row {
     display: flex;
-    flex-direction: row;
     color: #ffffff;
     text-align: center;
-    width: 90%;
-    margin: 100px 0;
-    padding: 40px;
+    margin: 80px 0;
   }
   
   .tbh-card-item {
@@ -22,20 +19,18 @@
 @media only screen and (max-width: 450px) {
   .tbh-row {
     display: flex;
-    flex-direction: row;
-    font-size: 20px;
-    /* font-size: 1.5rem; */
+    /* font-size: 20px; */
+    font-size: 1.5rem;
     color: white;
     text-align: center;
-    /* width: 90%;
     margin: 50px 0;
-    padding: 20px; */
+    padding: 20px;
   }
   
-  /* .tbh-card-item {
+  .tbh-card-item {
     flex-grow: 1;
     font-size: 1.5rem;
-    color: blue;
-  } */
+    margin: 0px 20px;
+  }
 
 }
