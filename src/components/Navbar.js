@@ -4,7 +4,7 @@ import Logo from "../styles/img/tbh-logo-wh-hires.png"
 
 const Navbar = () => {
   return (
-    <nav className="navbar is-transparent" role="navigation" aria-label="main navigation">
+    <nav className="navbar" role="navigation" aria-label="main navigation">
     
     <div className="navbar-brand">
       <Link to="/" className="navbar-item">
