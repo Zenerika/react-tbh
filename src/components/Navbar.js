@@ -20,7 +20,7 @@ const Navbar = () => {
       </a>
     </div>
 
-    <div className="navbar-end">
+    {/* <div className="navbar-end">
       <div className="navbar-item">
         <div className="buttons" id="btnLogout">
           <Link to="/logout" className="button is-primary">
@@ -28,7 +28,7 @@ const Navbar = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </div> */}
     
   </nav>
   )
