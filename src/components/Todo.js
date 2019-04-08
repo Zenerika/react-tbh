@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 import Hide from '../styles/img/hide.png'
 import Show from '../styles/img/show.png'
 import Coin from '../styles/img/coin.png'
-import Quote from './Quote'
-import axios from 'axios'
+// import Quote from './Quote'
+// import axios from 'axios'
 import '../styles/Todo.css'
 
 class Todo extends Component {
@@ -15,26 +15,26 @@ class Todo extends Component {
       todoItem: '',
       done: false,
       visible: true,
-      eye: true,
-      quote: '"To thy own self be true."' 
+      eye: true
+      // quote: 'To thy own self be true.' 
     }
-    this.changeQuote = this.changeQuote.bind(this)
+    // this.changeQuote = this.changeQuote.bind(this)
   }
 
-  changeQuote(newQuote) {
-    this.setState({quote: newQuote})
-  }
+  // changeQuote(newQuote) {
+  //   this.setState({quote: newQuote})
+  // }
 
-  componentDidMount() {
-    axios.get('https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&callback=')
-    .then((response) => {
-      console.log('response: ', response);
-      this.changeQuote(response.data[0].content)
-    })
-    .catch(function (error) {
-      console.log('error: ', error);
-    });
-  }
+  // componentDidMount() {
+  //   axios.get('https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&callback=')
+  //   .then((response) => {
+  //     console.log('response: ', response);
+  //     this.changeQuote(response.data[0].content)
+  //   })
+  //   .catch(function (error) {
+  //     console.log('error: ', error);
+  //   });
+  // }
 
   handleChangeTodoItem(e) {
     e.preventDefault()
