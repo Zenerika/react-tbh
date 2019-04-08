@@ -26,7 +26,7 @@ class Todo extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&callback=')
+    axios.get('https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&callback=')
     .then((response) => {
       console.log('response: ', response);
       this.changeQuote(response.data[0].content)
