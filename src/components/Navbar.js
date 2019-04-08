@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from "../styles/img/tbh-logo-wh-hires.png"
+import '../styles/Navbar.css'
+
 
 const Navbar = () => {
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar" id="navbar" role="navigation" aria-label="main navigation">
     
     <div className="navbar-brand">
       <Link to="/" className="navbar-item">
