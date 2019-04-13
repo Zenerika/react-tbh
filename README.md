@@ -1,6 +1,6 @@
 # Tech Balanced Home
 
-[__TBH__](http://www.techbalancedhome.com) is a web app that I'm currently working on using React-Redux. I'm planning on refactoring TBH in the near future using React Native and launching it as a mobile app.  
+[__TBH__](https://tech-balanced-home.herokuapp.com/) is a web app that I'm currently working on using React-Redux. I'm planning on refactoring TBH in the near future using React Native and launching it as a mobile app.  
 
 This was the capstone project for my coding bootcamp, [DigitalCrafts](https://www.digitalcrafts.com/) Houston.
 
@@ -32,7 +32,6 @@ ___
 ![Grocery List Flowchart](https://github.com/Zenerika/react-tbh/blob/master/TBH_Flowchart/TBH_FlowChart_v1_3.png)
 ___
 ![Bills Flowchart](https://github.com/Zenerika/react-tbh/blob/master/TBH_Flowchart/TBH_FlowChart_v1_4.png)
-___
 
 
 
